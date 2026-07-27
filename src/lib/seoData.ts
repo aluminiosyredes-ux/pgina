@@ -1,0 +1,59 @@
+import type { SEOData } from "../hooks/useSEO";
+
+export const SEO: Record<string, SEOData> = {
+  home: {
+    title: "Aluminios & Redes | Redes de Seguridad · Roller · Aluminios · Domótica — Regiones de Arica, Iquique y Antofagasta",
+    description: "Empresa líder en redes de seguridad certificadas, cortinas roller, carpintería de aluminio y domótica en las regiones de Arica, Iquique y Antofagasta. Instalaciones profesionales con garantía. Cotizá gratis hoy.",
+    keywords: "redes seguridad Antofagasta, cortinas roller Antofagasta, aluminios Antofagasta, domótica Antofagasta, instalaciones norte Chile, redes seguridad Arica, instalaciones Iquique",
+    canonical: "/",
+  },
+  redes: {
+    title: "Redes de Seguridad Certificadas | Balcones · Escaleras · Industrial — Regiones de Arica, Iquique y Antofagasta",
+    description: "Instalación de redes de seguridad certificadas para balcones, escaleras, espacios industriales y mascotas. Polipropileno UV estabilizado. Cotizá sin cargo en las regiones de Arica, Iquique y Antofagasta.",
+    keywords: "redes seguridad Antofagasta, malla proteccion balcon, red seguridad escalera, redes industriales Iquique, proteccion niños balcon, cotizar redes seguridad, redes seguridad Arica",
+    ogTitle: "Redes de Seguridad Certificadas | Aluminios & Redes",
+    ogDescription: "Instalación profesional de redes de seguridad en las regiones de Arica, Iquique y Antofagasta. Certificadas, resistentes a UV. Cotizá gratis.",
+    canonical: "/redes",
+  },
+  roller: {
+    title: "Cortinas Roller a Medida | Blackout · Sunscreen · Motorizadas — Regiones de Arica, Iquique y Antofagasta",
+    description: "Cortinas roller fabricadas a medida: Blackout, Sunscreen, Motorizadas, Dúo y Zebra. Instalación incluida en las regiones de Arica, Iquique y Antofagasta. Más de 30 telas disponibles.",
+    keywords: "cortinas roller Antofagasta, cortinas blackout Iquique, cortinas sunscreen norte Chile, cortinas motorizadas Antofagasta, roller a medida, persianas Antofagasta, cortinas roller Arica",
+    ogTitle: "Cortinas Roller a Medida | Aluminios & Redes",
+    ogDescription: "Fabricamos e instalamos cortinas roller Blackout, Sunscreen y Motorizadas en las regiones de Arica, Iquique y Antofagasta. Más de 30 telas.",
+    canonical: "/roller",
+  },
+  aluminios: {
+    title: "Carpintería en Aluminio | Ventanas DVH · Cierres · Puertas — Regiones de Arica, Iquique y Antofagasta",
+    description: "Fabricación e instalación de ventanas DVH, puertas corredizas, cerramientos de balcón y terraza en aluminio. Garantía 2 años. Residencial y comercial en las regiones de Arica, Iquique y Antofagasta.",
+    keywords: "ventanas aluminio Antofagasta, ventanas DVH Iquique, carpinteria aluminio norte Chile, cierre terraza Antofagasta, puertas aluminio Iquique, frentes comerciales aluminio, aluminio Arica",
+    ogTitle: "Carpintería en Aluminio | Aluminios & Redes",
+    ogDescription: "Ventanas DVH, puertas, cerramientos y frentes comerciales en aluminio. Garantía 2 años en las regiones de Arica, Iquique y Antofagasta.",
+    canonical: "/aluminios",
+  },
+  domotica: {
+    title: "Domótica e Instalaciones Inteligentes | Hogar Automatizado — Regiones de Arica, Iquique y Antofagasta",
+    description: "Automatización del hogar: iluminación inteligente, climatización, seguridad y cortinas motorizadas. Compatible con Alexa, Google Home y Apple HomeKit. Instalación limpia en las regiones de Arica, Iquique y Antofagasta.",
+    keywords: "domotica Antofagasta, hogar inteligente Iquique, automatizacion hogar norte Chile, Alexa Antofagasta, Google Home Iquique, iluminacion inteligente, smart home Chile, domotica Arica",
+    ogTitle: "Domótica e Hogar Inteligente | Aluminios & Redes",
+    ogDescription: "Automatizá tu hogar: iluminación, climatización y seguridad. Compatible con Alexa y Google Home. Regiones de Arica, Iquique y Antofagasta.",
+    canonical: "/domotica",
+  },
+  contacto: {
+    title: "Contacto | Aluminios & Redes — Regiones de Arica, Iquique y Antofagasta",
+    description: "Contactá a Aluminios & Redes para cotizaciones, consultas y asistencia técnica. WhatsApp disponible. Atendemos en las regiones de Arica, Iquique y Antofagasta.",
+    keywords: "contacto Aluminios Redes Antofagasta, cotizar redes seguridad, teléfono instalaciones Antofagasta, contacto Arica",
+    canonical: "/contacto",
+  },
+  asistencia: {
+    title: "Asistencia Técnica | Mantenimiento y Reparaciones — Aluminios & Redes",
+    description: "Servicio de asistencia técnica para redes, cortinas roller, aluminios y domótica. Mantenimiento preventivo y correctivo. Con y sin turno en las regiones de Arica, Iquique y Antofagasta.",
+    keywords: "asistencia tecnica Antofagasta, reparacion cortinas roller, mantenimiento redes seguridad, soporte domotica Antofagasta, tecnico aluminios Iquique, asistencia tecnica Arica",
+    canonical: "/asistencia",
+  },
+  pagos: {
+    title: "Pagos y Métodos de Pago | Aluminios & Redes",
+    description: "Realizá tu pago de forma segura. Aceptamos transferencia, tarjeta y efectivo. Comprobante inmediato.",
+    canonical: "/pagos",
+  },
+};
