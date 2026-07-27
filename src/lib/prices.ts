@@ -23,8 +23,8 @@ const STORAGE_KEY = "ayr_precios";
 
 export const DEFAULTS: PriceConfig = {
   redes: [
-    { id: "equiplex",     label: "Malla Equiplex",     priceMin: 8_500, priceMax: 11_000 },
-    { id: "transparente", label: "Malla Transparente",  priceMin: 6_500, priceMax:  9_000 },
+    { id: "equiplex",     label: "Malla Equiplex",     priceMin: 20_000, priceMax: 26_000 },
+    { id: "transparente", label: "Malla Transparente",  priceMin: 15_000, priceMax:  19_000 },
   ],
   roller: [
     { id: "blackout",   label: "Roller Blackout",       priceMin: 18_000, priceMax: 24_000 },
