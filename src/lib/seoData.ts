@@ -2,9 +2,9 @@ import type { SEOData } from "../hooks/useSEO";
 
 export const SEO: Record<string, SEOData> = {
   home: {
-    title: "Aluminios & Redes Antofagasta | Redes, Ventanales, Roller y Domótica",
-    description: "Soluciones para hogares en Antofagasta: mallas y redes de seguridad, ventanales de aluminio, cierres de balcones, cortinas roller y domótica. Instalación profesional.",
-    keywords: "mallas de seguridad Antofagasta, redes de seguridad Antofagasta, ventanales de aluminio Antofagasta, cierres de balcones Antofagasta, cortinas roller Antofagasta, domótica Antofagasta, mallas de seguridad Antofagasta, redes de seguridad Antofagasta, redes de protección Antofagasta, instalación de redes de seguridad Antofagasta, cortinas roller Antofagasta, aluminios Antofagasta, domótica Antofagasta, instalaciones norte Chile, redes seguridad Arica, instalaciones Iquique",
+    title: "Aluminios y Redes Antofagasta | Mallas de Seguridad, Roller y Aluminios",
+    description: "Especialistas en mallas y redes de seguridad en Antofagasta, además de ventanales de aluminio, cortinas roller y domótica. Instalación profesional y garantía.",
+    keywords: "mallas de seguridad Antofagasta, redes de seguridad Antofagasta, mallas de protección Antofagasta, redes para balcones Antofagasta, aluminios Antofagasta, cortinas roller Antofagasta, domótica Antofagasta, mallas de seguridad Antofagasta, redes de protección Antofagasta, instalación de redes de seguridad Antofagasta, aluminios Arica, roller Iquique",
     canonical: "/",
     ogImage: "/og-default.jpg",
     ogType: "website",
@@ -12,11 +12,11 @@ export const SEO: Record<string, SEOData> = {
     ogLocale: "es_CL",
   },
   redes: {
-    title: "Redes de Seguridad Antofagasta | Alta Resistencia e Instalación Profesional",
-    description: "Instalación profesional de redes de seguridad en Antofagasta para balcones, departamentos, escaleras y mascotas. Redes resistentes UV, alta durabilidad y cotización rápida por WhatsApp.",
-    keywords: "redes seguridad Antofagasta, mallas de seguridad Antofagasta, redes proteccion Antofagasta, mallas para mascotas Antofagasta, redes resistentes UV",
-    ogTitle: "Redes de Seguridad Certificadas | Aluminios & Redes",
-    ogDescription: "Instalación profesional de redes de seguridad en las regiones de Arica, Iquique y Antofagasta. Certificadas, resistentes a UV. Cotizá gratis.",
+    title: "Mallas y Redes de Seguridad Antofagasta | Alta Resistencia",
+    description: "Instalación profesional de mallas y redes de seguridad en Antofagasta para balcones, ventanas, terrazas y mascotas. Redes de alta resistencia con cotización rápida.",
+    keywords: "mallas de seguridad Antofagasta, mallas protección Antofagasta, redes de seguridad Antofagasta, redes para balcones Antofagasta, malla para gatos Antofagasta, redes resistentes UV, mallas para mascotas Antofagasta",
+    ogTitle: "Mallas y Redes de Seguridad | Aluminios & Redes",
+    ogDescription: "Instalación profesional de mallas y redes de seguridad en Antofagasta. Materiales resistentes a UV y a condiciones costeras. Cotizá por WhatsApp.",
     canonical: "/redes",
     ogImage: "/og-default.jpg",
     ogType: "website",
@@ -45,6 +45,7 @@ export const SEO: Record<string, SEOData> = {
       }
     ]
   },
+
 
   roller: {
     title: "Cortinas Roller a Medida | Blackout · Sunscreen · Motorizadas — Regiones de Arica, Iquique y Antofagasta",

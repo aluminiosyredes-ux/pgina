@@ -577,6 +577,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── SEO: Sección local adicional (mallas y redes) ── */}
+      <section className="py-8 bg-[#0f0f0f] border-t border-white/[0.04]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-4">
+            <h2 className="text-2xl md:text-3xl font-black text-white mb-3">Mallas y redes de seguridad en Antofagasta</h2>
+            <p className="text-zinc-400 max-w-3xl mx-auto">En Aluminios y Redes instalamos mallas y redes de seguridad de alta resistencia en Antofagasta para balcones, terrazas, ventanas y protección de mascotas. Nuestras soluciones están diseñadas para entregar seguridad, durabilidad y una instalación profesional adaptada a las condiciones del norte de Chile.</p>
+            <div className="mt-4">
+              <Link href="/redes" className="inline-block px-5 py-2 rounded-md bg-amber-500 text-black font-bold">Conoce nuestras mallas y redes de seguridad</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── COVERAGE BANNER ── */}
       <section className="relative bg-[#070707] overflow-hidden">
         {/* Amber glow */}

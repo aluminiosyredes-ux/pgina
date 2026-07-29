@@ -390,8 +390,8 @@ export default function Redes() {
       {/* Redes para balcones y departamentos — SEO local */}
       <section aria-labelledby="balcones-heading" className="py-10 bg-[#0f0f0f] border-t border-white/[0.04]">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 id="balcones-heading" className="text-2xl md:text-3xl font-black text-white mb-3">Redes de seguridad para balcones y departamentos en Antofagasta</h2>
-          <p className="text-zinc-400 mb-3">Protegemos balcones, terrazas, ventanas y departamentos en altura con soluciones diseñadas para la seguridad de familias y mascotas. Nuestras redes de seguridad de alta resistencia están pensadas para soportar exposición solar y condiciones costeras, manteniendo la estética del espacio.</p>
+          <h2 id="balcones-heading" className="text-2xl md:text-3xl font-black text-white mb-3">Mallas de seguridad para balcones y departamentos en Antofagasta</h2>
+          <p className="text-zinc-400 mb-3">Las mallas de seguridad son una solución efectiva para balcones, ventanas, terrazas y la protección de mascotas. Realizamos instalación profesional en Antofagasta y utilizamos redes de alta resistencia adaptadas al clima del norte, pensadas para soportar la alta exposición solar y la corrosión por salitre.</p>
           <p className="text-zinc-400">La instalación profesional en Antofagasta incluye medición precisa, selección del material adecuado y montaje cuidado para garantizar durabilidad y protección. Ofrecemos alternativas según uso —protección de personas, contención de mascotas o mantenimiento estético— siempre con instalación profesional.</p>
         </div>
       </section>
