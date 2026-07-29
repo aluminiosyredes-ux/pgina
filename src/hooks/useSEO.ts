@@ -11,6 +11,11 @@ export interface SEOData {
   ogType?: string;
   twitterImage?: string;
   ogLocale?: string;
+  // Optional FAQ entries to be included as JSON-LD
+  faq?: Array<{
+    question: string;
+    answer: string;
+  }>;
 }
 
 function ensureMeta(attrType: "name" | "property", attrName: string, value: string) {
@@ -120,9 +125,31 @@ export function useSEO(data: SEOData) {
         areaServed: ["Arica", "Iquique", "Antofagasta"]
       };
 
-      // Remove empty address fields to avoid invalid schema; keep structure for future completion
-      // If address details are unknown, omit address.streetAddress/addressLocality
-      setLDJson([org, localBusiness]);
+      // Build JSON-LD array and optionally include FAQ schema when provided in SEO data
+      const ldArray: any[] = [org, localBusiness];
+
+      const anyData: any = data as any;
+      if (anyData.faq && Array.isArray(anyData.faq) && anyData.faq.length > 0) {
+        const mainEntity = anyData.faq.map((q: any) => ({
+          "@type": "Question",
+          name: q.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: q.answer,
+          },
+        }));
+
+        const faqSchema = {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity,
+        };
+
+        ldArray.push(faqSchema);
+      }
+
+      // Write JSON-LD to head
+      setLDJson(ldArray);
     } catch (e) {
       // don't break rendering if JSON-LD fails
       console.warn("Failed to set JSON-LD SEO", e);

@@ -2,9 +2,9 @@ import type { SEOData } from "../hooks/useSEO";
 
 export const SEO: Record<string, SEOData> = {
   home: {
-    title: "Aluminios & Redes | Redes de Seguridad · Roller · Aluminios · Domótica — Regiones de Arica, Iquique y Antofagasta",
-    description: "Empresa líder en redes de seguridad certificadas, cortinas roller, carpintería de aluminio y domótica en las regiones de Arica, Iquique y Antofagasta. Instalaciones profesionales con garantía. Cotizá gratis hoy.",
-    keywords: "redes seguridad Antofagasta, cortinas roller Antofagasta, aluminios Antofagasta, domótica Antofagasta, instalaciones norte Chile, redes seguridad Arica, instalaciones Iquique",
+    title: "Aluminios & Redes Antofagasta | Redes, Ventanales, Roller y Domótica",
+    description: "Soluciones para hogares en Antofagasta: mallas y redes de seguridad, ventanales de aluminio, cierres de balcones, cortinas roller y domótica. Instalación profesional.",
+    keywords: "mallas de seguridad Antofagasta, redes de seguridad Antofagasta, ventanales de aluminio Antofagasta, cierres de balcones Antofagasta, cortinas roller Antofagasta, domótica Antofagasta, mallas de seguridad Antofagasta, redes de seguridad Antofagasta, redes de protección Antofagasta, instalación de redes de seguridad Antofagasta, cortinas roller Antofagasta, aluminios Antofagasta, domótica Antofagasta, instalaciones norte Chile, redes seguridad Arica, instalaciones Iquique",
     canonical: "/",
     ogImage: "/og-default.jpg",
     ogType: "website",
@@ -12,9 +12,9 @@ export const SEO: Record<string, SEOData> = {
     ogLocale: "es_CL",
   },
   redes: {
-    title: "Redes de Seguridad Certificadas | Balcones · Escaleras · Industrial — Regiones de Arica, Iquique y Antofagasta",
-    description: "Instalación de redes de seguridad certificadas para balcones, escaleras, espacios industriales y mascotas. Polipropileno UV estabilizado. Cotizá sin cargo en las regiones de Arica, Iquique y Antofagasta.",
-    keywords: "redes seguridad Antofagasta, malla proteccion balcon, red seguridad escalera, redes industriales Iquique, proteccion niños balcon, cotizar redes seguridad, redes seguridad Arica",
+    title: "Redes de Seguridad Antofagasta | Alta Resistencia e Instalación Profesional",
+    description: "Instalación profesional de redes de seguridad en Antofagasta para balcones, departamentos, escaleras y mascotas. Redes resistentes UV, alta durabilidad y cotización rápida por WhatsApp.",
+    keywords: "redes seguridad Antofagasta, mallas de seguridad Antofagasta, redes proteccion Antofagasta, mallas para mascotas Antofagasta, redes resistentes UV",
     ogTitle: "Redes de Seguridad Certificadas | Aluminios & Redes",
     ogDescription: "Instalación profesional de redes de seguridad en las regiones de Arica, Iquique y Antofagasta. Certificadas, resistentes a UV. Cotizá gratis.",
     canonical: "/redes",
@@ -22,7 +22,30 @@ export const SEO: Record<string, SEOData> = {
     ogType: "website",
     twitterImage: "/og-default.jpg",
     ogLocale: "es_CL",
+    faq: [
+      {
+        question: "¿Instalan redes de seguridad en Antofagasta?",
+        answer: "Sí. Instalamos redes de seguridad en Antofagasta para balcones, terrazas, ventanas y departamentos, con medición y visita técnica incluida cuando corresponde."
+      },
+      {
+        question: "¿Qué tipo de red necesito para mi balcón?",
+        answer: "Depende del uso: recomendamos Red Equiplex para protección de personas y niños; la malla transparente es ideal para mascotas y estética. Podemos asesorarte tras una medición."
+      },
+      {
+        question: "¿Las redes de seguridad sirven para mascotas?",
+        answer: "Sí. Disponemos de mallas específicas para contención de mascotas y opciones certificadas (cuando se requiere protección de personas recomendamos Equiplex)."
+      },
+      {
+        question: "¿Las redes resisten sol y condiciones exteriores?",
+        answer: "Nuestros materiales incluyen tratamiento UV y son aptos para ambientes costeros; están diseñadas para máxima durabilidad frente a sol y salitre."
+      },
+      {
+        question: "¿Cómo puedo solicitar una cotización?",
+        answer: "Podés solicitar cotización por WhatsApp con medidas o programar una visita técnica. Usá el cotizador en la web o enviá un mensaje al número indicado para respuesta rápida."
+      }
+    ]
   },
+
   roller: {
     title: "Cortinas Roller a Medida | Blackout · Sunscreen · Motorizadas — Regiones de Arica, Iquique y Antofagasta",
     description: "Cortinas roller fabricadas a medida: Blackout, Sunscreen, Motorizadas, Dúo y Zebra. Instalación incluida en las regiones de Arica, Iquique y Antofagasta. Más de 30 telas disponibles.",
