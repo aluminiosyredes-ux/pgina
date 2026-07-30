@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { Shield, Layers, Box, Cpu, Check, ChevronRight, Send } from "lucide-react";
-import { WHATSAPP_NUMBER, COMPANY_NAME } from "../config";
+import { WHATSAPP_NUMBER, COMPANY_NAME, DISABLE_COTIZADOR } from "../config";
 
 const pageTransition = {
   initial: { opacity: 0, y: 16 },
@@ -84,7 +84,7 @@ export default function Cotizador() {
   };
 
   return (
-    <motion.div {...pageTransition} className="pt-16">
+    <motion.div {...pageTransition} className="pt-16" style={DISABLE_COTIZADOR ? { display: "none" } : undefined}>
       {/* Header */}
       <section className="py-24 bg-[#151515] relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-amber-500/4 rounded-full blur-[100px] pointer-events-none" />

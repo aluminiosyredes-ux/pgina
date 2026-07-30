@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowDown, ChevronRight } from "lucide-react";
 import { smoothScrollTo } from "../lib/scroll";
+import { WHATSAPP_NUMBER } from "../config";
+import { track } from "../lib/analytics";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 40 },
@@ -59,11 +61,13 @@ export default function Hero() {
         {/* CTAs */}
         <motion.div {...fadeUp(0.65)} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href="#cotizador"
-            onClick={(e) => { e.preventDefault(); smoothScrollTo("#cotizador"); }}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola,%20quisiera%20cotizar%20ahora.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => track("whatsapp_click", { source: "hero_cta" })}
             className="group flex items-center gap-2 px-8 py-4 bg-amber-500 text-black font-bold text-sm tracking-widest uppercase rounded hover:bg-amber-400 transition-all duration-300 shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 hover:scale-105"
           >
-            Cotizar ahora
+            Consultar por WhatsApp
             <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </a>
           <a

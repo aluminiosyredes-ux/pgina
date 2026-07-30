@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Shield, Check, ChevronRight, MessageCircle, Star, ArrowLeft, Calculator, Info, Ruler, User } from "lucide-react";
-import { WHATSAPP_NUMBER, COMPANY_NAME } from "../config";
+import { WHATSAPP_NUMBER, COMPANY_NAME, DISABLE_COTIZADOR } from "../config";
 import { saveQuote } from "../lib/quotes";
 import { getPrices } from "../lib/prices";
 import AsistenciaStrip from "../components/AsistenciaStrip";
@@ -163,9 +163,13 @@ export default function Redes() {
               Materiales de primera línea, instalación sin obra y garantía total.
             </p>
             <div className="flex flex-wrap gap-3 mb-10">
-              <a href="#cotizador" onClick={(e) => { e.preventDefault(); document.getElementById("cotizador")?.scrollIntoView({ behavior: "smooth" }); }}
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n%20para%20redes%20de%20seguridad.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => track("whatsapp_click", { source: "redes_hero_cta" })}
                 className="group flex items-center gap-2 px-7 py-3.5 bg-blue-600 text-white font-bold text-xs tracking-widest uppercase rounded hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20">
-                Solicitar cotización <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                Solicitar cotización por WhatsApp <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </a>
               <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quisiera consultar sobre redes de seguridad.")}`} target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 px-7 py-3.5 border border-white/10 text-white font-semibold text-xs tracking-widest uppercase rounded hover:border-white/25 hover:bg-white/5 transition-all">
@@ -406,7 +410,7 @@ export default function Redes() {
       </section>
 
       {/* COTIZADOR — positioned immediately after hero */}
-      <section id="cotizador" className="py-8 bg-[#0f0f0f] scroll-mt-16">
+      <section id="cotizador" style={DISABLE_COTIZADOR ? { display: "none" } : undefined} className="py-8 bg-[#0f0f0f] scroll-mt-16">
         <div className="max-w-2xl mx-auto px-6">
 
 

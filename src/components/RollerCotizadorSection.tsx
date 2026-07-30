@@ -6,7 +6,7 @@ import {
   Check, AlertTriangle, RotateCcw, User,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { WHATSAPP_NUMBER } from "../config";
+import { WHATSAPP_NUMBER, DISABLE_COTIZADOR } from "../config";
 import { saveQuote } from "../lib/quotes";
 import { getPrices } from "../lib/prices";
 
@@ -483,7 +483,7 @@ export default function RollerCotizadorSection() {
   const reset = () => { setDir(-1); setStep(1); setTypeId(null); setW(""); setH(""); };
 
   return (
-    <section className="py-16 bg-[#111111]">
+    <section style={DISABLE_COTIZADOR ? { display: "none" } : undefined} className="py-16 bg-[#111111]">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}

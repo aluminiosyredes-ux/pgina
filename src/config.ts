@@ -8,3 +8,6 @@ export const COVERAGE = "Regiones de Arica · Iquique · Antofagasta";
 export const COVERAGE_INSTALL = "Instalaciones en las regiones de Arica, Iquique y Antofagasta";
 export const COVERAGE_SHIPPING = "Ventas y envíos para todo Chile";
 export const COUNTRY = "Chile";
+
+// Feature flags
+export const DISABLE_COTIZADOR = true;

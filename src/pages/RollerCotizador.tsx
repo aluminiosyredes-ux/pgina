@@ -7,7 +7,7 @@ import {
   RotateCcw, AlertTriangle, Check,
   ChevronRight,
 } from "lucide-react";
-import { WHATSAPP_NUMBER } from "../config";
+import { WHATSAPP_NUMBER, DISABLE_COTIZADOR } from "../config";
 
 // ─── DATA ──────────────────────────────────────────────────────────────────────
 
@@ -548,6 +548,7 @@ const stepVariants = {
 };
 
 export default function RollerCotizador() {
+  import("../config");
   const [step, setStep] = useState(1);
   const [direction, setDirection] = useState(1);
   const [selectedTypeId, setSelectedTypeId] = useState<string | null>(null);
@@ -573,7 +574,7 @@ export default function RollerCotizador() {
   };
 
   return (
-    <motion.div {...pageTransition}>
+    <motion.div {...pageTransition} style={DISABLE_COTIZADOR ? { display: "none" } : undefined }>
 
       {/* ── HERO ── */}
       <section className="relative min-h-[42vh] flex items-end pb-10 overflow-hidden bg-[#0f0f0f]">
