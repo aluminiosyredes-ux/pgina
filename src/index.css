@@ -93,3 +93,109 @@
     color: hsl(0, 0%, 96%);
   }
 }
+
+/* Floating WhatsApp button enhancements */
+@layer components {
+  .whatsapp-enhanced {
+    /* modern shadow to stand out */
+    box-shadow: 0 10px 30px rgba(37,211,102,0.20), 0 4px 12px rgba(0,0,0,0.35);
+    transition: box-shadow 220ms ease, transform 180ms ease;
+    will-change: box-shadow, transform;
+    /* subtle pulse via shadow every 4s */
+    animation: whatsappPulse 4s ease-in-out infinite;
+  }
+
+  .whatsapp-enhanced:hover {
+    /* Keep hover scale from Tailwind, just enhance shadow */
+    box-shadow: 0 16px 48px rgba(37,211,102,0.30), 0 8px 20px rgba(0,0,0,0.45);
+  }
+
+  @keyframes whatsappPulse {
+    0% { box-shadow: 0 10px 30px rgba(37,211,102,0.20), 0 4px 12px rgba(0,0,0,0.35); }
+    6% { box-shadow: 0 14px 44px rgba(37,211,102,0.28), 0 8px 20px rgba(0,0,0,0.42); }
+    20% { box-shadow: 0 10px 30px rgba(37,211,102,0.20), 0 4px 12px rgba(0,0,0,0.35); }
+    100% { box-shadow: 0 10px 30px rgba(37,211,102,0.20), 0 4px 12px rgba(0,0,0,0.35); }
+  }
+
+  /* Ensure visibility and proper sizing on small screens */
+  @media (max-width: 480px) {
+    .whatsapp-enhanced {
+      /* Slightly reduce size via transform so inline size remains but scales down */
+      transform: scale(0.86);
+    }
+    .whatsapp-enhanced:hover {
+      transform: scale(0.95);
+    }
+  }
+
+  /* Bubble tooltip styles */
+  .wa-bubble {
+    position: absolute;
+    bottom: calc(100% + 12px); /* 12px gap above button */
+    left: 50%;
+    transform: translateX(-50%) translateY(8px); /* starts 8px lower for translateY animation */
+    opacity: 0;
+    pointer-events: none;
+
+    /* size + shape */
+    height: 42px;
+    padding: 0 16px; /* horizontal padding */
+    border-radius: 9999px;
+
+    /* visual */
+    background: #ffffff;
+    color: #25D366;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 42px; /* center text vertically */
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+
+    transition: opacity 250ms ease, transform 250ms ease;
+    z-index: 9999; /* ensure above other elements */
+    white-space: nowrap;
+  }
+
+  .wa-bubble.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Keep text perfectly centered */
+  .wa-bubble-text {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+
+  /* Arrow centered exactly at the bottom center of the bubble */
+  .wa-bubble-arrow {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+  }
+
+  /* Ensure bubble stays visible while hovering the button or the bubble itself.
+     Cover common DOM arrangements where the button may be the previous sibling
+     or the parent contains both button and bubble. */
+  .whatsapp-enhanced:hover ~ .wa-bubble,
+  .whatsapp-enhanced:hover + .wa-bubble,
+  .whatsapp-enhanced:hover .wa-bubble,
+  .wa-bubble:hover {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+}

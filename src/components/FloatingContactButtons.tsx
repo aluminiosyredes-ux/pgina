@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
@@ -7,10 +7,21 @@ import { track } from "../lib/analytics";
 
 export default function FloatingContactButtons() {
   const [visible, setVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean>(typeof window !== "undefined" ? window.innerWidth < 768 : false);
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 200);
     return () => clearTimeout(t);
+  }, []);
+
+  useEffect(() => {
+    function onResize() {
+      setIsMobile(window.innerWidth < 768);
+    }
+
+    onResize();
+    window.addEventListener("resize", onResize, { passive: true });
+    return () => window.removeEventListener("resize", onResize);
   }, []);
 
   const waHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
@@ -36,13 +47,15 @@ export default function FloatingContactButtons() {
             label="WhatsApp"
             delay={0}
             color="green"
-            icon={<MessageCircle size={18} className="text-white fill-white" />}
+            icon={<MessageCircle size={isMobile ? 50 : 46} className="text-white fill-white" />}
             bgClass="bg-[#25D366]"
-            shadowClass="shadow-[#25D366]/40"
+            shadowClass="shadow-[#25D366]/40 whatsapp-enhanced"
             hoverBgClass="hover:bg-[#1ebe5d]"
             pingClass="bg-[#25D366]"
             labelClass="bg-[#25D366] text-white"
             onClick={handleWA}
+            size={isMobile ? 95 : 82}
+            bubbleText={"💬 ¡Cotiza Gratis!"}
           />
 
           {/* Instagram */}
@@ -77,10 +90,79 @@ interface FloatBtnProps {
   pingClass: string;
   labelClass: string;
   onClick?: () => void;
+  size?: number; // width/height in px, optional
+  onHover?: () => void;
+  onLeave?: () => void;
+  bubbleText?: string;
 }
 
-function FloatBtn({ href, label, delay, icon, bgClass, shadowClass, hoverBgClass, pingClass, labelClass, onClick }: FloatBtnProps) {
+function FloatBtn({ href, label, delay, icon, bgClass, shadowClass, hoverBgClass, pingClass, labelClass, onClick, size, onHover, onLeave, bubbleText }: FloatBtnProps) {
   const [hovered, setHovered] = useState(false);
+  const [bubbleVisible, setBubbleVisible] = useState(false);
+  const bubbleTimerRef = useRef<number | null>(null);
+  const lastScrollY = useRef<number>(typeof window !== 'undefined' ? window.scrollY : 0);
+
+  const btnSize = size ?? 40; // default 40px (w-10 h-10)
+
+  useEffect(() => {
+    if (!bubbleText) return;
+
+    // Show on first load for 5s
+    setBubbleVisible(true);
+    if (bubbleTimerRef.current) window.clearTimeout(bubbleTimerRef.current);
+    bubbleTimerRef.current = window.setTimeout(() => setBubbleVisible(false), 5000);
+
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 480;
+
+    function onVisibility() {
+      if (document.visibilityState === 'visible' && isMobile) {
+        setBubbleVisible(true);
+        if (bubbleTimerRef.current) window.clearTimeout(bubbleTimerRef.current);
+        bubbleTimerRef.current = window.setTimeout(() => setBubbleVisible(false), 3000);
+      }
+    }
+
+    function onScroll() {
+      const y = window.scrollY;
+      // detect scroll up
+      if (isMobile && y < lastScrollY.current - 5) {
+        setBubbleVisible(true);
+        if (bubbleTimerRef.current) window.clearTimeout(bubbleTimerRef.current);
+        bubbleTimerRef.current = window.setTimeout(() => setBubbleVisible(false), 3000);
+      }
+      lastScrollY.current = y;
+    }
+
+    document.addEventListener('visibilitychange', onVisibility);
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    return () => {
+      document.removeEventListener('visibilitychange', onVisibility);
+      window.removeEventListener('scroll', onScroll);
+      if (bubbleTimerRef.current) window.clearTimeout(bubbleTimerRef.current);
+    };
+  }, [bubbleText]);
+
+  useEffect(() => {
+    if (hovered) {
+      setBubbleVisible(true);
+      if (bubbleTimerRef.current) window.clearTimeout(bubbleTimerRef.current);
+    } else {
+      // hide shortly after mouse leaves
+      if (bubbleTimerRef.current) window.clearTimeout(bubbleTimerRef.current);
+      bubbleTimerRef.current = window.setTimeout(() => setBubbleVisible(false), 400);
+    }
+  }, [hovered]);
+
+  function handleMouseEnter() {
+    setHovered(true);
+    if (onHover) onHover();
+  }
+
+  function handleMouseLeave() {
+    setHovered(false);
+    if (onLeave) onLeave();
+  }
 
   return (
     <motion.div
@@ -88,8 +170,8 @@ function FloatBtn({ href, label, delay, icon, bgClass, shadowClass, hoverBgClass
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] as const }}
       className="relative flex items-center"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {/* Label tooltip — slides up on hover */}
       <AnimatePresence>
@@ -106,6 +188,14 @@ function FloatBtn({ href, label, delay, icon, bgClass, shadowClass, hoverBgClass
         )}
       </AnimatePresence>
 
+      {/* Bubble tooltip for WhatsApp (if provided) */}
+      {bubbleText && (
+        <div className={`wa-bubble ${bubbleVisible ? 'show' : ''}`} role="status" aria-hidden={!bubbleVisible}>
+          <span className="wa-bubble-text">{bubbleText}</span>
+          <span className="wa-bubble-arrow" aria-hidden="true" />
+        </div>
+      )}
+
       {/* Main button */}
       <a
         href={href}
@@ -113,7 +203,9 @@ function FloatBtn({ href, label, delay, icon, bgClass, shadowClass, hoverBgClass
         rel="noopener noreferrer"
         aria-label={label}
         onClick={onClick}
-        className={`relative w-10 h-10 rounded-full flex items-center justify-center shadow-xl ${bgClass} ${shadowClass} ${hoverBgClass} hover:scale-110 hover:shadow-2xl transition-all duration-300`}
+        // keep existing classes, but set explicit size to scale ~30% when requested
+        className={`relative rounded-full flex items-center justify-center shadow-xl ${bgClass} ${shadowClass} ${hoverBgClass} hover:scale-110 hover:shadow-2xl transition-all duration-300`}
+        style={{ width: `${btnSize}px`, height: `${btnSize}px` }}
       >
         {/* Ping ring */}
         <span className={`absolute inset-0 rounded-full ${pingClass} animate-ping opacity-[0.18]`} />

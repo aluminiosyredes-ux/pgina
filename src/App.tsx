@@ -9,6 +9,9 @@ import Footer from "./components/Footer";
 import FloatingContactButtons from "./components/FloatingContactButtons";
 import ConversionPopup from "./components/ConversionPopup";
 import ChatWidget from "./components/ChatWidget";
+
+// Toggle to enable/disable AI Chat floating widget. Set to false to hide without removing code.
+const ENABLE_CHAT_WIDGET = false;
 import CoverageBanner from "./components/CoverageBanner";
 import Home from "./pages/Home";
 import Redes from "./pages/Redes";
@@ -102,7 +105,7 @@ function PublicLayout() {
       <Footer />
       <FloatingContactButtons />
       <ConversionPopup />
-      <ChatWidget />
+      {ENABLE_CHAT_WIDGET && <ChatWidget /> }
     </div>
   );
 }
