@@ -14,6 +14,7 @@ export function initWhatsAppTracking() {
       link.href.includes("wa.me")
     ) {
 
+      // Meta Pixel: always send custom event
       metaTrackCustom("WhatsAppClick", {
         origen: window.location.pathname,
       });
