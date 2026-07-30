@@ -19,15 +19,17 @@ const pageTransition = {
 const HERO_SLIDES = [
   {
     eyebrow: "Soluciones Premium",
-    pre:  "Soluciones que ",
-    word: "elevan",
-    post: " tu espacio.",
+    // Make initial hero headline SEO-focused for Antofagasta
+    pre:  "",
+    word: "Mallas, Ventanales y Automatización para tu Hogar en Antofagasta",
+    post: "",
     accent: "from-amber-400 via-yellow-300 to-amber-500",
     accentRgb: "245,158,11",
-    sub:  "Redes de seguridad, cortinas roller, carpintería de aluminio y domótica. Más de 15 años de precisión y calidad premium en Chile.",
+    sub:  "Soluciones profesionales en seguridad, aluminio, cortinas roller y tecnología inteligente para hogares y departamentos.",
     cta:  { label: "Ver servicios", href: "#servicios", scroll: true },
     cta2: { label: "WhatsApp", wa: true },
   },
+
   {
     eyebrow: "Redes de Seguridad",
     pre:  "Protección que da ",
@@ -537,6 +539,55 @@ export default function Home() {
         </div>
 
 
+      </section>
+
+      {/* ── SEO: Soluciones para el hogar (visible) ── */}
+      <section className="py-12 bg-[#0f0f0f] border-t border-white/[0.04]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl md:text-3xl font-black text-white mb-3">Soluciones para tu hogar en Antofagasta</h2>
+            <p className="text-zinc-400">Ofrecemos mallas y redes de seguridad, ventanales de aluminio, cierres de balcones, cortinas roller y sistemas de domótica con instalación profesional.</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <Link href="/redes" className="group block p-5 rounded-xl bg-[#0b0b0b] border border-white/6 hover:border-white/12 transition-all">
+              <h3 className="text-lg font-bold text-white mb-2">Redes de seguridad</h3>
+              <p className="text-zinc-400 text-sm mb-3">Mallas y redes de alta resistencia para balcones, terrazas, ventanas y protección de mascotas.</p>
+              <div className="text-xs font-bold uppercase text-blue-400 flex items-center gap-2">Ver redes <ChevronRight size={12} /></div>
+            </Link>
+
+            <Link href="/aluminios" className="group block p-5 rounded-xl bg-[#0b0b0b] border border-white/6 hover:border-white/12 transition-all">
+              <h3 className="text-lg font-bold text-white mb-2">Ventanales de aluminio</h3>
+              <p className="text-zinc-400 text-sm mb-3">Fabricación e instalación de ventanales, cierres de balcones y soluciones en aluminio.</p>
+              <div className="text-xs font-bold uppercase text-blue-400 flex items-center gap-2">Ver aluminios <ChevronRight size={12} /></div>
+            </Link>
+
+            <Link href="/roller" className="group block p-5 rounded-xl bg-[#0b0b0b] border border-white/6 hover:border-white/12 transition-all">
+              <h3 className="text-lg font-bold text-white mb-2">Cortinas roller</h3>
+              <p className="text-zinc-400 text-sm mb-3">Cortinas roller a medida, blackout, sunscreen y sistemas motorizados.</p>
+              <div className="text-xs font-bold uppercase text-blue-400 flex items-center gap-2">Ver cortinas <ChevronRight size={12} /></div>
+            </Link>
+
+            <Link href="/domotica" className="group block p-5 rounded-xl bg-[#0b0b0b] border border-white/6 hover:border-white/12 transition-all">
+              <h3 className="text-lg font-bold text-white mb-2">Domótica</h3>
+              <p className="text-zinc-400 text-sm mb-3">Automatización del hogar con iluminación inteligente, cortinas motorizadas y control desde dispositivos inteligentes.</p>
+              <div className="text-xs font-bold uppercase text-blue-400 flex items-center gap-2">Ver domótica <ChevronRight size={12} /></div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SEO: Sección local adicional (mallas y redes) ── */}
+      <section className="py-8 bg-[#0f0f0f] border-t border-white/[0.04]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-4">
+            <h2 className="text-2xl md:text-3xl font-black text-white mb-3">Mallas y redes de seguridad en Antofagasta</h2>
+            <p className="text-zinc-400 max-w-3xl mx-auto">En Aluminios y Redes instalamos mallas y redes de seguridad de alta resistencia en Antofagasta para balcones, terrazas, ventanas y protección de mascotas. Nuestras soluciones están diseñadas para entregar seguridad, durabilidad y una instalación profesional adaptada a las condiciones del norte de Chile.</p>
+            <div className="mt-4">
+              <Link href="/redes" className="inline-block px-5 py-2 rounded-md bg-amber-500 text-black font-bold">Conoce nuestras mallas y redes de seguridad</Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* ── COVERAGE BANNER ── */}

@@ -58,6 +58,13 @@ export function track(type: EventType, meta?: Record<string, string>) {
     });
   }
 
+  // Mark whatsapp clicks in sessionStorage to help dedupe global handler
+  if (type === "whatsapp_click" && typeof window !== "undefined") {
+    try {
+      sessionStorage.setItem("ayr_last_whatsapp_click_ts", String(Date.now()));
+    } catch {}
+  }
+
   // Estadísticas locales opcionales
   try {
     const stored = JSON.parse(

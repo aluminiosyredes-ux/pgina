@@ -153,21 +153,23 @@ export default function Redes() {
               <Shield size={12} /> Protección certificada
             </div>
             <h1 className="text-5xl md:text-7xl xl:text-8xl font-black text-white tracking-tight leading-[0.88] mb-6">
-              Redes de<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-300 to-sky-400">Seguridad</span>
+              Mallas y Redes de Seguridad en Antofagasta
             </h1>
+            <p className="text-zinc-300 text-md leading-relaxed mb-4">
+              Protección de alta resistencia, instalación profesional y soluciones adaptadas para balcones, terrazas, ventanas y mascotas.
+            </p>
             <p className="text-zinc-400 text-lg leading-relaxed mb-8 max-w-xl">
-              Instalamos redes certificadas para balcones, escaleras, espacios industriales y exteriores.
+              Instalamos redes de seguridad de alta resistencia para balcones, escaleras, espacios industriales y exteriores.
               Materiales de primera línea, instalación sin obra y garantía total.
             </p>
             <div className="flex flex-wrap gap-3 mb-10">
               <a href="#cotizador" onClick={(e) => { e.preventDefault(); document.getElementById("cotizador")?.scrollIntoView({ behavior: "smooth" }); }}
                 className="group flex items-center gap-2 px-7 py-3.5 bg-blue-600 text-white font-bold text-xs tracking-widest uppercase rounded hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20">
-                Cotizar ahora <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                Solicitar cotización <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </a>
               <a href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quisiera consultar sobre redes de seguridad.")}`} target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 px-7 py-3.5 border border-white/10 text-white font-semibold text-xs tracking-widest uppercase rounded hover:border-white/25 hover:bg-white/5 transition-all">
-                <MessageCircle size={14} /> WhatsApp
+                <MessageCircle size={14} /> Enviar medidas por WhatsApp
               </a>
             </div>
             <div className="flex items-center gap-10 pt-8 border-t border-white/6">
@@ -385,9 +387,28 @@ export default function Redes() {
         </div>
       </section>
 
+      {/* Redes para balcones y departamentos — SEO local */}
+      <section aria-labelledby="balcones-heading" className="py-10 bg-[#0f0f0f] border-t border-white/[0.04]">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 id="balcones-heading" className="text-2xl md:text-3xl font-black text-white mb-3">Mallas de seguridad para balcones y departamentos en Antofagasta</h2>
+          <p className="text-zinc-400 mb-3">Las mallas de seguridad son una solución efectiva para balcones, ventanas, terrazas y la protección de mascotas. Realizamos instalación profesional en Antofagasta y utilizamos redes de alta resistencia adaptadas al clima del norte, pensadas para soportar la alta exposición solar y la corrosión por salitre.</p>
+          <p className="text-zinc-400">La instalación profesional en Antofagasta incluye medición precisa, selección del material adecuado y montaje cuidado para garantizar durabilidad y protección. Ofrecemos alternativas según uso —protección de personas, contención de mascotas o mantenimiento estético— siempre con instalación profesional.</p>
+        </div>
+      </section>
+
+      {/* Local SEO block: indexable content focused on Antofagasta */}
+      <section aria-labelledby="local-seo-heading" className="py-12 bg-[#0f0f0f] border-t border-white/[0.04]">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 id="local-seo-heading" className="text-2xl md:text-3xl font-black text-white mb-3">Mallas y redes de seguridad de alta resistencia en Antofagasta</h2>
+          <p className="text-zinc-400 mb-4">En Aluminios & Redes realizamos la instalación profesional de redes de seguridad en Antofagasta, adaptadas a las condiciones costeras y la alta exposición solar. Nuestras soluciones protegen a personas y mascotas, ofreciendo materiales con resistencia UV y larga durabilidad. Nos adaptamos a balcones, terrazas, ventanas y departamentos en altura, con mediciones y montaje profesional.</p>
+          <p className="text-zinc-400">Ofrecemos evaluación in situ, selección de la malla adecuada y una instalación sin obras que prioriza la estética y la seguridad. Para solicitar una cotización rápida, podés usar el cotizador o enviarnos las medidas por WhatsApp.</p>
+        </div>
+      </section>
+
       {/* COTIZADOR — positioned immediately after hero */}
       <section id="cotizador" className="py-8 bg-[#0f0f0f] scroll-mt-16">
         <div className="max-w-2xl mx-auto px-6">
+
 
           {/* Header */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="text-center mb-6">
@@ -696,7 +717,38 @@ export default function Redes() {
         </div>
       </section>
 
-      <MercadoLibreSection />
+                {/* FAQ visible section — Questions frecuentes about redes de seguridad */}
+          <section aria-labelledby="faq-heading" className="mt-8 mb-6 max-w-4xl mx-auto px-6">
+            <h2 id="faq-heading" className="text-2xl md:text-3xl font-black text-white mb-4">Preguntas frecuentes sobre redes de seguridad</h2>
+            <div className="space-y-3 text-zinc-400">
+              <details className="bg-[#0b0b0b] border border-white/6 rounded-xl p-4">
+                <summary className="font-semibold cursor-pointer">¿Instalan redes de seguridad en Antofagasta?</summary>
+                <div className="mt-2 text-sm">Sí. Realizamos instalaciones en Antofagasta y la zona norte, con evaluación previa del sitio, medición exacta y montaje profesional garantizado.</div>
+              </details>
+
+              <details className="bg-[#0b0b0b] border border-white/6 rounded-xl p-4">
+                <summary className="font-semibold cursor-pointer">¿Qué tipo de red necesito para mi balcón?</summary>
+                <div className="mt-2 text-sm">Depende del uso: para protección de personas se recomienda Red Equiplex certificada; para mascotas o estética, una red transparente de nylon puede ser suficiente. Podemos asesorarte tras la medición.</div>
+              </details>
+
+              <details className="bg-[#0b0b0b] border border-white/6 rounded-xl p-4">
+                <summary className="font-semibold cursor-pointer">¿Las redes de seguridad sirven para mascotas?</summary>
+                <div className="mt-2 text-sm">Sí. Disponemos de soluciones específicas para mascotas, diseñadas para contener animales sin afectar la visibilidad. Recomendamos la opción según el tamaño y comportamiento de la mascota.</div>
+              </details>
+
+              <details className="bg-[#0b0b0b] border border-white/6 rounded-xl p-4">
+                <summary className="font-semibold cursor-pointer">¿Las redes resisten sol y condiciones exteriores?</summary>
+                <div className="mt-2 text-sm">Nuestras mallas son tratadas para resistencia UV y diseñadas para ambientes costeros. Recomendamos mantenimiento periódico en zonas de alta salinidad.</div>
+              </details>
+
+              <details className="bg-[#0b0b0b] border border-white/6 rounded-xl p-4">
+                <summary className="font-semibold cursor-pointer">¿Cómo puedo solicitar una cotización?</summary>
+                <div className="mt-2 text-sm">Podés usar el cotizador de esta página o enviarnos las medidas por WhatsApp para recibir una cotización rápida. También coordinamos visita técnica si es necesario.</div>
+              </details>
+            </div>
+          </section>
+
+<MercadoLibreSection />
 
       <ProductsSection category="redes" title="Productos de Redes" />
 
