@@ -118,6 +118,7 @@ export function useSEO(data: SEOData) {
         url: BASE,
         logo: "/logo-ld.png",
         telephone: "+56 9 5973 7903",
+        description: "Instalación profesional de mallas y redes de seguridad en Antofagasta con asesoría técnica y montaje especializado.",
         address: {
           "@type": "PostalAddress",
           // addressLocality / streetAddress not provided — to be completed

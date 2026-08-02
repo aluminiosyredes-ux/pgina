@@ -2,9 +2,9 @@ import type { SEOData } from "../hooks/useSEO";
 
 export const SEO: Record<string, SEOData> = {
   home: {
-    title: "Aluminios y Redes Antofagasta | Mallas de Seguridad, Roller y Aluminios",
-    description: "Especialistas en mallas y redes de seguridad en Antofagasta, además de ventanales de aluminio, cortinas roller y domótica. Instalación profesional y garantía.",
-    keywords: "mallas de seguridad Antofagasta, redes de seguridad Antofagasta, mallas de protección Antofagasta, redes para balcones Antofagasta, aluminios Antofagasta, cortinas roller Antofagasta, domótica Antofagasta, mallas de seguridad Antofagasta, redes de protección Antofagasta, instalación de redes de seguridad Antofagasta, aluminios Arica, roller Iquique",
+    title: "Mallas de Seguridad en Antofagasta | Redes de Seguridad, Roller y Aluminios",
+    description: "Mallas de seguridad en Antofagasta para balcones, ventanas y terrazas. Instalación profesional de redes de seguridad, cortinas roller y aluminios con garantía.",
+    keywords: "mallas de seguridad Antofagasta, redes de seguridad Antofagasta, mallas para balcones Antofagasta, mallas de protección Antofagasta, redes de protección Antofagasta, aluminios Antofagasta, cortinas roller Antofagasta, domótica Antofagasta",
     canonical: "/",
     ogImage: "/og-default.jpg",
     ogType: "website",
@@ -12,11 +12,11 @@ export const SEO: Record<string, SEOData> = {
     ogLocale: "es_CL",
   },
   redes: {
-    title: "Mallas y Redes de Seguridad Antofagasta | Alta Resistencia",
-    description: "Instalación profesional de mallas y redes de seguridad en Antofagasta para balcones, ventanas, terrazas y mascotas. Redes de alta resistencia con cotización rápida.",
-    keywords: "mallas de seguridad Antofagasta, mallas protección Antofagasta, redes de seguridad Antofagasta, redes para balcones Antofagasta, malla para gatos Antofagasta, redes resistentes UV, mallas para mascotas Antofagasta",
-    ogTitle: "Mallas y Redes de Seguridad | Aluminios & Redes",
-    ogDescription: "Instalación profesional de mallas y redes de seguridad en Antofagasta. Materiales resistentes a UV y a condiciones costeras. Cotizá por WhatsApp.",
+    title: "Mallas de Seguridad en Antofagasta | Redes de Seguridad para Balcones y Ventanas",
+    description: "Instalación profesional de mallas de seguridad en Antofagasta para balcones, ventanas, terrazas, mascotas y niños. Redes de seguridad de alta resistencia con cotización rápida y protección certificada.",
+    keywords: "mallas de seguridad Antofagasta, redes de seguridad Antofagasta, mallas de protección Antofagasta, redes de protección Antofagasta, malla para gatos Antofagasta, redes resistentes UV, mallas para mascotas Antofagasta",
+    ogTitle: "Mallas de Seguridad en Antofagasta | Aluminios & Redes",
+    ogDescription: "Instalación profesional de mallas de seguridad en Antofagasta. Balcones, ventanas y terrazas protegidas con redes de seguridad resistentes y cotización por WhatsApp.",
     canonical: "/redes",
     ogImage: "/og-default.jpg",
     ogType: "website",

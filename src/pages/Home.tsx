@@ -19,13 +19,12 @@ const pageTransition = {
 const HERO_SLIDES = [
   {
     eyebrow: "Soluciones Premium",
-    // Make initial hero headline SEO-focused for Antofagasta
     pre:  "",
-    word: "Mallas, Ventanales y Automatización para tu Hogar en Antofagasta",
+    word: "Mallas de Seguridad en Antofagasta",
     post: "",
     accent: "from-amber-400 via-yellow-300 to-amber-500",
     accentRgb: "245,158,11",
-    sub:  "Soluciones profesionales en seguridad, aluminio, cortinas roller y tecnología inteligente para hogares y departamentos.",
+    sub:  "Instalación profesional de mallas de seguridad para balcones, ventanas y terrazas, con protección para niños y mascotas.",
     cta:  { label: "Ver servicios", href: "#servicios", scroll: true },
     cta2: { label: "WhatsApp", wa: true },
   },
@@ -80,8 +79,8 @@ const SLIDE_DURATION = 5000;
 
 const services = [
   {
-    href: "/redes", icon: Shield, title: "Redes de Seguridad",
-    desc: "Protección certificada para balcones, escaleras e industrias. Con cotizador online.",
+    href: "/redes", icon: Shield, title: "Mallas de Seguridad",
+    desc: "Mallas de seguridad en Antofagasta para balcones, ventanas, terrazas y departamentos. Protección certificada para niños, mascotas e instalaciones en altura.",
     tag: "Cotizador incluido", tagColor: "text-blue-400 bg-blue-500/15 border-blue-500/20",
     iconBg: "bg-blue-500/20 border border-blue-500/30", iconColor: "text-blue-400",
     image: "/images/1.png",
@@ -551,9 +550,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             <Link href="/redes" className="group block p-5 rounded-xl bg-[#0b0b0b] border border-white/6 hover:border-white/12 transition-all">
-              <h3 className="text-lg font-bold text-white mb-2">Redes de seguridad</h3>
-              <p className="text-zinc-400 text-sm mb-3">Mallas y redes de alta resistencia para balcones, terrazas, ventanas y protección de mascotas.</p>
-              <div className="text-xs font-bold uppercase text-blue-400 flex items-center gap-2">Ver redes <ChevronRight size={12} /></div>
+              <h3 className="text-lg font-bold text-white mb-2">Mallas de Seguridad (Redes de Seguridad)</h3>
+              <p className="text-zinc-400 text-sm mb-3">Mallas de seguridad y redes de alta resistencia para balcones, terrazas, ventanas y protección de niños y mascotas.</p>
+              <div className="text-xs font-bold uppercase text-blue-400 flex items-center gap-2">Ver mallas y redes <ChevronRight size={12} /></div>
             </Link>
 
             <Link href="/aluminios" className="group block p-5 rounded-xl bg-[#0b0b0b] border border-white/6 hover:border-white/12 transition-all">
@@ -586,6 +585,16 @@ export default function Home() {
             <div className="mt-4">
               <Link href="/redes" className="inline-block px-5 py-2 rounded-md bg-amber-500 text-black font-bold">Conoce nuestras mallas y redes de seguridad</Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 bg-[#111111] border-t border-white/[0.04]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-black text-white mb-3">¿Por qué elegir nuestras mallas de seguridad?</h2>
+            <p className="text-zinc-400 mb-4">En Antofagasta entregamos mallas de seguridad Antofagasta instaladas profesionalmente para balcones, ventanas, terrazas y departamentos. Nuestro equipo prioriza la protección para balcones y ventanas, la comodidad de tu familia y la seguridad de niños y mascotas.</p>
+            <p className="text-zinc-400">Elegimos materiales resistentes a la intemperie y ofrecemos una instalación limpia y rápida, cuidando cada detalle para que tus espacios queden protegidos sin perder la vista ni la estética.</p>
           </div>
         </div>
       </section>

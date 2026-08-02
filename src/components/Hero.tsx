@@ -38,7 +38,7 @@ export default function Hero() {
         {/* Main headline */}
         <motion.h1
           {...fadeUp(0.35)}
-          className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight text-white leading-[0.9] mb-6"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white leading-[0.9] mb-6"
         >
           Calidad que
           <br />
@@ -52,7 +52,7 @@ export default function Hero() {
         {/* Subtitle */}
         <motion.p
           {...fadeUp(0.5)}
-          className="max-w-2xl mx-auto text-zinc-400 text-lg md:text-xl leading-relaxed mb-10"
+          className="max-w-2xl mx-auto text-zinc-400 text-base sm:text-lg md:text-xl leading-relaxed mb-10"
         >
           Redes de seguridad, sistemas roller, carpintería de aluminio y domótica inteligente.
           Diseñamos el entorno que mereces, con la precisión que exiges.
@@ -65,7 +65,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => track("whatsapp_click", { source: "hero_cta" })}
-            className="group flex items-center gap-2 px-8 py-4 bg-amber-500 text-black font-bold text-sm tracking-widest uppercase rounded hover:bg-amber-400 transition-all duration-300 shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 hover:scale-105"
+            className="group flex items-center gap-2 px-8 py-4 bg-amber-500 text-black font-bold text-base tracking-widest uppercase rounded hover:bg-amber-400 transition-all duration-300 shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 hover:scale-105"
           >
             Consultar por WhatsApp
             <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -73,7 +73,7 @@ export default function Hero() {
           <a
             href="#redes"
             onClick={(e) => { e.preventDefault(); smoothScrollTo("#redes"); }}
-            className="flex items-center gap-2 px-8 py-4 border border-white/10 text-white font-semibold text-sm tracking-widest uppercase rounded hover:border-white/30 hover:bg-white/5 transition-all duration-300"
+            className="flex items-center gap-2 px-8 py-4 border border-white/10 text-white font-semibold text-base tracking-widest uppercase rounded hover:border-white/30 hover:bg-white/5 transition-all duration-300"
           >
             Ver servicios
           </a>
@@ -82,7 +82,7 @@ export default function Hero() {
         {/* Stats */}
         <motion.div
           {...fadeUp(0.8)}
-          className="mt-20 grid grid-cols-3 gap-8 max-w-lg mx-auto"
+          className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-lg mx-auto"
         >
           {[
             { value: "+500", label: "Proyectos" },

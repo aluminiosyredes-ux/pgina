@@ -153,14 +153,17 @@ export default function Redes() {
               <Shield size={12} /> Protección certificada
             </div>
             <h1 className="text-5xl md:text-7xl xl:text-8xl font-black text-white tracking-tight leading-[0.88] mb-6">
-              Mallas y Redes de Seguridad en Antofagasta
+              Mallas de seguridad y redes de seguridad en Antofagasta
             </h1>
             <p className="text-zinc-300 text-md leading-relaxed mb-4">
-              Protección de alta resistencia, instalación profesional y soluciones adaptadas para balcones, terrazas, ventanas y mascotas.
+              Protección de alta resistencia con mallas de seguridad y redes de protección; instalación profesional y soluciones adaptadas para balcones, terrazas, ventanas y mascotas.
             </p>
             <p className="text-zinc-400 text-lg leading-relaxed mb-8 max-w-xl">
-              Instalamos redes de seguridad de alta resistencia para balcones, escaleras, espacios industriales y exteriores.
+              Instalamos mallas de seguridad y redes de seguridad de alta resistencia para balcones, escaleras, espacios industriales y exteriores.
               Materiales de primera línea, instalación sin obra y garantía total.
+            </p>
+            <p className="text-zinc-400 text-sm mb-6 max-w-xl">
+              Consultá por WhatsApp sobre mallas de seguridad y redes de protección, y recibí asesoría experta para tu balcón, terraza o departamento.
             </p>
             <div className="flex flex-wrap gap-3 mb-10">
               <a
@@ -395,8 +398,8 @@ export default function Redes() {
       <section aria-labelledby="balcones-heading" className="py-10 bg-[#0f0f0f] border-t border-white/[0.04]">
         <div className="max-w-4xl mx-auto px-6">
           <h2 id="balcones-heading" className="text-2xl md:text-3xl font-black text-white mb-3">Mallas de seguridad para balcones y departamentos en Antofagasta</h2>
-          <p className="text-zinc-400 mb-3">Las mallas de seguridad son una solución efectiva para balcones, ventanas, terrazas y la protección de mascotas. Realizamos instalación profesional en Antofagasta y utilizamos redes de alta resistencia adaptadas al clima del norte, pensadas para soportar la alta exposición solar y la corrosión por salitre.</p>
-          <p className="text-zinc-400">La instalación profesional en Antofagasta incluye medición precisa, selección del material adecuado y montaje cuidado para garantizar durabilidad y protección. Ofrecemos alternativas según uso —protección de personas, contención de mascotas o mantenimiento estético— siempre con instalación profesional.</p>
+          <p className="text-zinc-400 mb-3">Las mallas de seguridad son una solución efectiva para balcones, ventanas, terrazas, departamentos y la protección de mascotas. Realizamos instalación profesional de mallas de seguridad en Antofagasta y utilizamos redes de seguridad y mallas de protección de alta resistencia adaptadas al clima del norte, pensadas para soportar la alta exposición solar y la corrosión por salitre.</p>
+          <p className="text-zinc-400">La instalación profesional en Antofagasta incluye medición precisa, selección del material adecuado y montaje cuidado para garantizar durabilidad y protección con mallas de seguridad y redes de protección. Ofrecemos alternativas según uso —protección de personas, contención de mascotas o mantenimiento estético— siempre con instalación profesional y atención a mallas para balcones y terrazas.</p>
         </div>
       </section>
 
@@ -404,8 +407,8 @@ export default function Redes() {
       <section aria-labelledby="local-seo-heading" className="py-12 bg-[#0f0f0f] border-t border-white/[0.04]">
         <div className="max-w-4xl mx-auto px-6">
           <h2 id="local-seo-heading" className="text-2xl md:text-3xl font-black text-white mb-3">Mallas y redes de seguridad de alta resistencia en Antofagasta</h2>
-          <p className="text-zinc-400 mb-4">En Aluminios & Redes realizamos la instalación profesional de redes de seguridad en Antofagasta, adaptadas a las condiciones costeras y la alta exposición solar. Nuestras soluciones protegen a personas y mascotas, ofreciendo materiales con resistencia UV y larga durabilidad. Nos adaptamos a balcones, terrazas, ventanas y departamentos en altura, con mediciones y montaje profesional.</p>
-          <p className="text-zinc-400">Ofrecemos evaluación in situ, selección de la malla adecuada y una instalación sin obras que prioriza la estética y la seguridad. Para solicitar una cotización rápida, podés usar el cotizador o enviarnos las medidas por WhatsApp.</p>
+          <p className="text-zinc-400 mb-4">En Aluminios & Redes realizamos la instalación profesional de mallas de seguridad y redes de protección en Antofagasta, adaptadas a las condiciones costeras y la alta exposición solar. Nuestras soluciones protegen a personas, niños y mascotas, ofreciendo materiales con resistencia UV y larga durabilidad. Nos adaptamos a balcones, terrazas, ventanas y departamentos en altura, con mediciones y montaje profesional.</p>
+          <p className="text-zinc-400">Ofrecemos evaluación in situ, selección de la malla adecuada y una instalación sin obras que prioriza la estética y la seguridad. Para solicitar una cotización rápida de tu malla de seguridad o red de protección, podés enviarnos las medidas por WhatsApp y recibir asesoría para mallas para balcones, terrazas y departamentos.</p>
         </div>
       </section>
 
@@ -726,28 +729,28 @@ export default function Redes() {
             <h2 id="faq-heading" className="text-2xl md:text-3xl font-black text-white mb-4">Preguntas frecuentes sobre redes de seguridad</h2>
             <div className="space-y-3 text-zinc-400">
               <details className="bg-[#0b0b0b] border border-white/6 rounded-xl p-4">
-                <summary className="font-semibold cursor-pointer">¿Instalan redes de seguridad en Antofagasta?</summary>
-                <div className="mt-2 text-sm">Sí. Realizamos instalaciones en Antofagasta y la zona norte, con evaluación previa del sitio, medición exacta y montaje profesional garantizado.</div>
+                <summary className="font-semibold cursor-pointer">¿Cuánto cuesta instalar mallas de seguridad en Antofagasta?</summary>
+                <div className="mt-2 text-sm">El precio depende del tipo de malla, el tamaño del espacio y la complejidad de la instalación. En general, nuestras mallas de seguridad para balcones y ventanas se cotizan por metro cuadrado y siempre entregamos un estimado claro antes de confirmar el servicio.</div>
               </details>
 
               <details className="bg-[#0b0b0b] border border-white/6 rounded-xl p-4">
-                <summary className="font-semibold cursor-pointer">¿Qué tipo de red necesito para mi balcón?</summary>
-                <div className="mt-2 text-sm">Depende del uso: para protección de personas se recomienda Red Equiplex certificada; para mascotas o estética, una red transparente de nylon puede ser suficiente. Podemos asesorarte tras la medición.</div>
+                <summary className="font-semibold cursor-pointer">¿Qué tipo de malla utilizan?</summary>
+                <div className="mt-2 text-sm">Utilizamos mallas de seguridad certificadas como Red Equiplex para protección de personas y niños, y mallas transparentes de nylon para balcones, ventanas y terrazas donde se busca un diseño más discreto sin sacrificar seguridad.</div>
               </details>
 
               <details className="bg-[#0b0b0b] border border-white/6 rounded-xl p-4">
-                <summary className="font-semibold cursor-pointer">¿Las redes de seguridad sirven para mascotas?</summary>
-                <div className="mt-2 text-sm">Sí. Disponemos de soluciones específicas para mascotas, diseñadas para contener animales sin afectar la visibilidad. Recomendamos la opción según el tamaño y comportamiento de la mascota.</div>
+                <summary className="font-semibold cursor-pointer">¿Protegen a niños y mascotas?</summary>
+                <div className="mt-2 text-sm">Sí. Nuestras mallas de seguridad en Antofagasta están pensadas para proteger a niños y mascotas, con materiales resistentes y una instalación profesional que evita espacios peligrosos y asegura la contención en balcones, terrazas y departamentos.</div>
               </details>
 
               <details className="bg-[#0b0b0b] border border-white/6 rounded-xl p-4">
-                <summary className="font-semibold cursor-pointer">¿Las redes resisten sol y condiciones exteriores?</summary>
-                <div className="mt-2 text-sm">Nuestras mallas son tratadas para resistencia UV y diseñadas para ambientes costeros. Recomendamos mantenimiento periódico en zonas de alta salinidad.</div>
+                <summary className="font-semibold cursor-pointer">¿Cuánto demora la instalación?</summary>
+                <div className="mt-2 text-sm">La instalación de una malla de seguridad suele demorarse entre unas pocas horas y un día, dependiendo del tamaño y las condiciones del espacio. Coordinamos la visita técnica para evaluar tu balcón, terraza o ventana y programar el montaje en el menor tiempo posible.</div>
               </details>
 
               <details className="bg-[#0b0b0b] border border-white/6 rounded-xl p-4">
                 <summary className="font-semibold cursor-pointer">¿Cómo puedo solicitar una cotización?</summary>
-                <div className="mt-2 text-sm">Podés usar el cotizador de esta página o enviarnos las medidas por WhatsApp para recibir una cotización rápida. También coordinamos visita técnica si es necesario.</div>
+                <div className="mt-2 text-sm">Podés enviarnos las medidas por WhatsApp o usar la sección de cotizador en esta página. También coordinamos visita técnica para un presupuesto preciso de mallas para balcones, ventanas o departamentos.</div>
               </details>
             </div>
           </section>

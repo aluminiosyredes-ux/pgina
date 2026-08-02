@@ -43,7 +43,7 @@ export default function Navbar() {
       >
         {/* ── TOP CONTACT BAR — floating glass buttons ── */}
         <div className="bg-black/50 backdrop-blur-lg border-b border-white/[0.06]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 h-10 flex items-center justify-between gap-3">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 h-12 flex items-center justify-between gap-3">
 
             {/* ── Floating round buttons — left ── */}
             <div className="flex items-center gap-2.5">
@@ -268,7 +268,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile hamburger */}
-          <button onClick={() => setOpen(!open)} className="md:hidden text-white p-2" aria-label="Menú">
+          <button onClick={() => setOpen(!open)} className="md:hidden text-white p-3" aria-label="Menú">
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
@@ -283,7 +283,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.22 }}
-            className="fixed top-[100px] left-0 right-0 z-40 bg-black/97 backdrop-blur-xl border-b border-white/5 px-6 py-4 flex flex-col gap-1 md:hidden"
+            className="fixed top-[100px] left-0 right-0 z-40 bg-black/97 backdrop-blur-xl border-b border-white/5 px-6 py-5 flex flex-col gap-2 md:hidden"
           >
             <Link
               href="/"
@@ -298,7 +298,7 @@ export default function Navbar() {
               <Link
                 key={s.href}
                 href={s.href}
-                className={`px-3 py-3 pl-5 rounded-lg text-sm font-medium tracking-wide transition-all ${
+                className={`px-3 py-4 pl-5 rounded-lg text-base font-medium tracking-wide transition-all ${
                   location === s.href ? "text-amber-400 bg-amber-500/8" : "text-zinc-400"
                 }`}
               >
@@ -342,7 +342,7 @@ export default function Navbar() {
                 href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-5 py-3 text-xs font-bold tracking-widest uppercase bg-[#25D366] text-white rounded"
+                className="flex items-center justify-center gap-2 px-5 py-4 text-sm font-bold tracking-widest uppercase bg-[#25D366] text-white rounded"
               >
                 <MessageCircle size={14} /> WhatsApp
               </a>
@@ -350,13 +350,13 @@ export default function Navbar() {
                 href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-5 py-3 text-xs font-bold tracking-widest uppercase border border-white/8 text-zinc-400 rounded hover:border-rose-500/25 hover:text-rose-400 transition-all"
+                className="flex items-center justify-center gap-2 px-5 py-4 text-sm font-bold tracking-widest uppercase border border-white/8 text-zinc-400 rounded hover:border-rose-500/25 hover:text-rose-400 transition-all"
               >
                 <FaInstagram size={14} /> Instagram
               </a>
               <Link
                 href="/redes"
-                className="px-5 py-3 text-xs font-bold tracking-widest uppercase bg-amber-500 text-black rounded text-center hover:bg-amber-400 transition-all"
+                className="px-5 py-4 text-sm font-bold tracking-widest uppercase bg-amber-500 text-black rounded text-center hover:bg-amber-400 transition-all"
               >
                 Cotizar redes
               </Link>

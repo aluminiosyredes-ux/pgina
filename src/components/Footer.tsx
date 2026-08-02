@@ -22,7 +22,7 @@ export default function Footer() {
     <footer className="bg-[#0f0f0f] border-t border-white/5">
 
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-6 py-7">
+      <div className="max-w-7xl mx-auto px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-2">
@@ -34,11 +34,11 @@ export default function Footer() {
                 <span className="font-black tracking-[0.12em] text-white text-[13px] uppercase">Redes</span>
               </div>
             </Link>
-            <p className="text-zinc-500 text-sm leading-relaxed max-w-sm mb-5">
+            <p className="text-zinc-500 text-sm sm:text-base leading-relaxed max-w-sm mb-5">
               Empresa especializada en redes de seguridad, sistemas roller, carpintería de aluminio y domótica.
               Instalaciones en las regiones de Arica, Iquique y Antofagasta.
             </p>
-            <div className="space-y-2.5 mb-4">
+            <div className="space-y-3 mb-4">
               {[
                 { icon: MapPin, text: "Regiones de Arica · Iquique · Antofagasta" },
                 { icon: Phone, text: "+56 9 5973 7903", href: "tel:+56959737903" },
@@ -66,7 +66,7 @@ export default function Footer() {
           {/* Service links */}
           <div>
             <p className="text-xs font-bold tracking-widest uppercase text-zinc-600 mb-4">Servicios</p>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3">
               {serviceLinks.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-sm text-zinc-500 hover:text-white transition-colors duration-200">
@@ -80,7 +80,7 @@ export default function Footer() {
           {/* Company links */}
           <div>
             <p className="text-xs font-bold tracking-widest uppercase text-zinc-600 mb-4">Empresa</p>
-            <ul className="space-y-2.5">
+            <ul className="space-y-3">
               {companyLinks.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-sm text-zinc-500 hover:text-white transition-colors duration-200">
@@ -94,8 +94,8 @@ export default function Footer() {
 
 
         {/* Bottom bar */}
-        <div className="mt-5 pt-5 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-zinc-700">
+        <div className="mt-5 pt-5 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm sm:text-xs text-zinc-700">
             © {new Date().getFullYear()} Aluminios & Redes · Chile. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-3">
@@ -109,7 +109,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="w-7 h-7 rounded-full border border-white/6 flex items-center justify-center text-zinc-600 hover:text-white hover:border-white/15 transition-all duration-200"
+                className="w-9 h-9 sm:w-7 sm:h-7 rounded-full border border-white/6 flex items-center justify-center text-zinc-600 hover:text-white hover:border-white/15 transition-all duration-200"
               >
                 <Icon size={13} />
               </a>
