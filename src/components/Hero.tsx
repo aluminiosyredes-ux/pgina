@@ -61,7 +61,7 @@ export default function Hero() {
         {/* CTAs */}
         <motion.div {...fadeUp(0.65)} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola,%20quisiera%20cotizar%20ahora.")}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quisiera cotizar ahora.")}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => track("whatsapp_click", { source: "hero_cta" })}

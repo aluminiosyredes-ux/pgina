@@ -167,7 +167,7 @@ export default function Redes() {
             </p>
             <div className="flex flex-wrap gap-3 mb-10">
               <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola,%20quisiera%20solicitar%20una%20cotizaci%C3%B3n%20para%20redes%20de%20seguridad.")}`}
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hola, quisiera solicitar una cotización para redes de seguridad.")}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => track("whatsapp_click", { source: "redes_hero_cta" })}
