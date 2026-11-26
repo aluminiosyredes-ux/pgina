@@ -7,7 +7,6 @@ import { syncPricesFromServer } from "./lib/prices";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FloatingContactButtons from "./components/FloatingContactButtons";
-import ConversionPopup from "./components/ConversionPopup";
 import ChatWidget from "./components/ChatWidget";
 
 // Toggle to enable/disable AI Chat floating widget. Set to false to hide without removing code.
@@ -104,7 +103,6 @@ function PublicLayout() {
       </main>
       <Footer />
       <FloatingContactButtons />
-      <ConversionPopup />
       {ENABLE_CHAT_WIDGET && <ChatWidget /> }
     </div>
   );
